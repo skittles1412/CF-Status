@@ -208,7 +208,7 @@
             } else if (memory < 1048576) {
                 return Math.floor(memory / 1024) + " KB";
             }
-            return Math.floor(memory / 1048576) + " MB";
+            return (memory / 1048576.0).toFixed(2) + " MB";
         }
 
         function isRunningSubmission(html) {
