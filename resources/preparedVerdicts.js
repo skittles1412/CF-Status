@@ -1,0 +1,17 @@
+const verdictOrder = {};
+verdictOrder['OK'] = 0;
+verdictOrder['COMPILATION_ERROR'] = 1;
+verdictOrder['RUNTIME_ERROR'] = 2;
+verdictOrder['WRONG_ANSWER'] = 3;
+verdictOrder['TIME_LIMIT_EXCEEDED'] = 4;
+verdictOrder['MEMORY_LIMIT_EXCEEDED'] = 5;
+verdictOrder['TESTING'] = 6;
+const preparedVerdicts = [];
+preparedVerdicts[0] = 'AC';
+preparedVerdicts[1] = 'CE';
+preparedVerdicts[2] = 'RTE';
+preparedVerdicts[3] = 'WA';
+preparedVerdicts[4] = 'TLE';
+preparedVerdicts[5] = 'MLE';
+preparedVerdicts[6] = 'Running';
+preparedVerdicts[7] = 'Other';
