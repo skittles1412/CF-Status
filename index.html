@@ -196,10 +196,11 @@
         </div>
     </div>
     <script type="text/javascript">
+        const MAX_TABLE_SIZE = 1000;
+
         const processedSubmissions = {};
 
         let dark = false;
-        let tableSize = 1000;
         const table = $(".status-frame-datatable")[0];
 
         function convertMemory(memory) {
@@ -289,7 +290,21 @@
                 newRow.insertCell().outerHTML = '<td class="time"></td>';
                 newRow.insertCell().outerHTML = '<td class="memory"></td>';
 
-                while (table.rows.length > tableSize) {
+                while (newRow.nextElementSibling != undefined && id < parseInt(newRow.nextElementSibling.id)) {
+                    const r1 = newRow.nextElementSibling, r2 = newRow;
+
+                    newRow.parentElement.insertBefore(r1, r2);
+
+                    if (r1.classList.contains("dark")) {
+                        r1.classList.remove("dark");
+                        r2.classList.add("dark");
+                    } else {
+                        r1.classList.add("dark");
+                        r2.classList.remove("dark");
+                    }
+                }
+
+                while (table.rows.length > MAX_TABLE_SIZE) {
                     table.deleteRow(table.rows.length - 1);
                 }
             }
