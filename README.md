@@ -1,8 +1,5 @@
-# CF Status
+# [CF Status](https://skittles1412.github.io/CF-Status/)
 [CodeForces Problemset Status](https://codeforces.com/problemset/status) but with the updating of new submissions and interesting graphs!
-
-## Usage
-Download the source code of the latest release. Unzip, open status.html in your favorite browser, and enjoy!
 
 ## Features
 ### Graphs
@@ -33,4 +30,3 @@ Please report bugs in the issues tab. Pull requests are always welcome!
   * Submitter
   * Problem
   * Diagnostics popup
-* Figure out github pages so users don't have to download anything
